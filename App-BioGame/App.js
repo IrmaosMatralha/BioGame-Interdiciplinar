@@ -1,4 +1,4 @@
-import Route from '../Route'
+import Route from './route'
 import {NavigationContainer} from '@react-navigation/native'
 
 export default function App() {

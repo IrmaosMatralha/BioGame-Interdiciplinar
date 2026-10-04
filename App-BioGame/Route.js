@@ -4,6 +4,9 @@ import Cadastro from './TelasLogin/TelaCadastro'
 import Login from './TelasLogin/TelaLogin'
 import RecuperarSenha from './TelasLogin/TelaRecuperarSenha'
 import RecuperarSenha2 from './TelasLogin/TelaRecuperarSenha2'
+import Home from './Telas/Home'
+
+const Stack = createNativeStackNavigator()
 
 export default function Route() {
   return (
@@ -30,6 +33,10 @@ export default function Route() {
       <Stack.Screen
         name="RecuperarSenha2"
         component={RecuperarSenha2}
+      />
+      <Stack.Screen
+        name="Home"
+        component={Home}
       />
     </Stack.Navigator>
   )
