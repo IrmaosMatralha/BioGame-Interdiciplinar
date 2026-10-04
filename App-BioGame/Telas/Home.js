@@ -19,7 +19,7 @@ export default function Cadastro() {
   }
 
   return (
-    <View>Seja Bem-Vindo</View>
+    <View><Text>Seja Bem-Vindo</Text></View>
   )}
   const styles = StyleSheet.create({
 
