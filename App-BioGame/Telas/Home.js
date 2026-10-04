@@ -19,8 +19,15 @@ export default function Cadastro() {
   }
 
   return (
-    <View><Text>Seja Bem-Vindo</Text></View>
+    <View style={styles.screen}>
+      <Text>Seja Bem-Vindo</Text>
+    </View>
   )}
   const styles = StyleSheet.create({
-
+    screen:{
+      flex: 1
+    },
+    conatiner:{
+      alignItems:'center'
+    },
   })

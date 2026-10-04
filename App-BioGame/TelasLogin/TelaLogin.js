@@ -42,7 +42,12 @@ export default function Cadastro() {
   return (
     <View style={styles.screen}>
       {/* imagem do fundo */}
-      
+      <ImageBackground
+        source={require('../assets/fundo.png')}
+        style={styles.background}
+        resizeMode="cover"
+        
+      >
         {/* Cabeçalho */}
         <View style={{ alignSelf: 'center', justifyContent: 'flex-start', marginTop: 90, marginBottom: 20 }}>
           <Text style={styles.textPrincipal}>Entrar</Text>
@@ -110,7 +115,33 @@ export default function Cadastro() {
           >
             <Text style={styles.textBottom2}> Não Possui conta? </Text>
           </TouchableOpacity>
+          <Image
+            source={require('../assets/flor.svg')}
+            style={{bottom:-20, left:-20, position:'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaLeft.svg')}
+            style={{top:10, right: -20, position:'absolute'  }}
+          />
+          <Image
+            source={require('../assets/folhaLeft3.svg')}
+            style={{top:190, left: -45, position:'absolute'  }}
+          />
+          
+          <Image
+            source={require('../assets/folhaRight.svg')}
+            style={{top:50, left: -15, position:'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaRight2.svg')}
+            style={{top:-40, left: -20,position:'absolute' }}
+          />
+          <Image
+            source={require('../assets/recicle.svg')}
+            style={{bottom:-15, position:'absolute', right: -5 }}
+          />
         </View>
+        </ImageBackground>
       
     </View>
   )
@@ -120,7 +151,7 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
-    height: '100%'
+    height: '100%', 
   },
   screen: {
     flex: 1,
@@ -143,7 +174,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 75, 
     borderTopRightRadius: 25, 
     borderBottomLeftRadius: 25, 
-    borderBottomRightRadius: 75
+    borderBottomRightRadius: 75, 
+    position: 'relative'
   },
   textBox1: {
     fontFamily: 'NunitoBold',
@@ -191,7 +223,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     margin: 10,
-  },
+  }, 
   boxAling: {
     flexDirection: 'row',
     justifyContent: 'space-between',

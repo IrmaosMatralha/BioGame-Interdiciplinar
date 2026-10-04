@@ -1,4 +1,4 @@
-import { View, ImageBackground, StyleSheet, TouchableOpacity, Text, TextInput, } from 'react-native'
+import { View, ImageBackground, StyleSheet, TouchableOpacity, Text, TextInput,Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 //fonte de aplicativo
 import { useFonts } from 'expo-font'
@@ -24,7 +24,12 @@ export default function Cadastro() {
   return (
     <View style={styles.screen}>
       {/* imagem do fundo */}
-      
+      <ImageBackground
+        source={require('../assets/fundo.png')}
+        style={styles.background}
+        resizeMode="cover"
+
+      >
         {/* Cabeçalho */}
         <View style={{ alignSelf: 'center', justifyContent: 'flex-start', marginTop: 90, marginBottom: 130 }}>
           <Text style={styles.textPrincipal}>Recuperar Senha</Text>
@@ -61,9 +66,35 @@ export default function Cadastro() {
           >
             <Text style={styles.textBottom}> Finalizar</Text>
           </TouchableOpacity>
-        </View>
 
-      
+          <Image
+            source={require('../assets/flor.svg')}
+            style={{ bottom: -20, left: -20, position: 'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaLeft.svg')}
+            style={{ top: 10, right: -20, position: 'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaLeft3.svg')}
+            style={{ top: 160, left: -45, position: 'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaRight.svg')}
+            style={{ top: 35, left: -15, position: 'absolute' }}
+          />
+          <Image
+            source={require('../assets/folhaRight2.svg')}
+            style={{ top: -50, left: -20, position: 'absolute' }}
+          />
+          <Image
+            source={require('../assets/recicle.svg')}
+            style={{ bottom: -15, position: 'absolute', right: -5 }}
+          />
+        </View>
+      </ImageBackground>
+
+
     </View>
   )
 }
@@ -93,9 +124,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     margin: 25,
     paddingVertical: 60,
-    borderTopLeftRadius: 25, 
-    borderTopRightRadius: 75, 
-    borderBottomLeftRadius: 75, 
+    borderTopLeftRadius: 25,
+    borderTopRightRadius: 75,
+    borderBottomLeftRadius: 75,
     borderBottomRightRadius: 25
   },
   textBox1: {
